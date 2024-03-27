@@ -7,3 +7,10 @@ window.onscroll = function () {
     navbar.style.background = 'transparent';
   }
 };
+
+let burguerIcon = document.querySelector('.burguer-icon');
+let navLinks = document.querySelector('.nav-list');
+
+function toggleMenu() {
+  navLinks.classList.toggle('show-menu');
+}
