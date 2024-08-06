@@ -131,24 +131,62 @@
     </section>
     
     <section class="about-container">
+      <main class="video-description-container">
         <div class="video-container">
-           <video width="320" height="640" autoplay loop muted>
+           <video width="320" height="540" autoplay loop muted>
              <source src="./assets/images/video.mp4" type="video/mp4">
              <p>Error al cargar el video, reinicia tu navegador.</p>
            </video>
         </div>
           <div class="about-para-container">
-             <p class="about-para">Con experiencia en la práctica y enseñanza del yoga, 
-                soy una instructora apasionada y dedicada que se especializa en combinar técnicas 
+             <p class="about-para">Soy una instructora apasionada y dedicada que se especializa en combinar técnicas 
                 tradicionales con enfoques contemporáneos para crear una experiencia única y transformadora.</p>
 
             <p class="about-para">Certificada en Hatha y Vinyasa, mi enfoque personalizado y empático se adapta a las necesidades
                individuales de sus alumnos, promoviendo no solo la mejora física, sino también 
                el equilibrio mental y emocional.</p>
-               
+
             <p class="about-para">Mi objetivo principal es guiar a mis estudiantes en un viaje hacia el autoconocimiento
                y el bienestar integral.</p>
           </div>
+      </main>
+
+                 <!--------------- Carrousel de imágenes -------------------->
+         
+            <div class="gallery-container">
+              <span class="slider" id="slider1"></span>
+              <span class="slider" id="slider2"></span>
+              <span class="slider" id="slider3"></span>
+              <span class="slider" id="slider4"></span>
+              <span class="slider" id="slider5"></span>
+
+              <div class="image-container">
+                <div class="slide-div" id="slide-1">
+                  <img class="img" id="img1" src="./assets/images/alumnos salon.jpeg" alt="imagen alumnos en clase" data-index="1">
+                  <a href="#slider1" class="button" id="button1"></a>
+                </div>
+
+                <div class="slide-div" id="slide-2">
+                  <img class="img" id="img2" src="./assets/images/alumnos playa.jpeg" alt="imagen alumnos en clase en la playa" data-index="2">
+                  <a href="#slider2" class="button" id="button2"></a>
+                </div>
+
+                <div class="slide-div" id="slide-3">
+                  <img class="img" id="img3" src="./assets/images/1.jpg" alt="instructora"data-index="3">
+                  <a href="#slider3" class="button" id="button3"></a>
+                </div>
+
+                <div class="slide-div" id="slide-4">
+                  <img class="img" id="img4" src="./assets/images/alumnos playa 2.jpeg" alt="imagen alumnos en clase abierta" data-index="4">
+                  <a href="#slider4" class="button" id="button4"></a>
+                </div>
+
+                <div class="slide-div" id="slide-5">
+                  <img class="img" id="img5" src="./assets/images/guerrero png.png" alt="mariana postura del guerrero" data-index="5">
+                  <a href="#slider5" class="button" id="button5"></a>
+                </div>
+              </div>
+            </div>          
     </section>
     <script src="index.js"></script>
   </body>
