@@ -168,14 +168,28 @@ h1 {
 .about-container {
   height: calc(100dvh - 80px);
   width: 80%;
-  margin: 5rem auto 0 auto;
+  /* margin: 5rem auto 0 auto; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.video-description-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  /* margin-top: 2rem; */
+  width: 100%;
+  height: 60%;
 }
 
 .video-container {
   width: 100%;
   height: 100%;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 300px;
+  max-height: 300px;
   margin: 0 auto;
 }
 
@@ -193,15 +207,132 @@ video {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  max-width: 500px;
 }
 
 .about-para {
   font-size: 1rem;
   margin-top: 1rem;
-  opacity: 0.6;
-  
+  opacity: 0.7;
 }
 
+/* ---------- Carrousel de imagenes ------------- */
+.gallery-container {
+  width: 80%;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 80%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px 0 25px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  filter: saturate(10%);
+  border-radius: 10px;
+  transition: 0.7s;
+}
+
+.button {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transition: 0.7s;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+#slider1:target ~ .image-container #img1,
+#slider1:target ~ .image-container .button {
+  width: 350px;
+  height: 350px;
+  background-color: transparent;
+  filter: saturate(100%);
+}
+
+#slider2:target ~ .image-container #img2,
+#slider2:target ~ .image-container .button {
+  width: 350px;
+  height: 350px;
+  background-color: transparent;
+  filter: saturate(100%);
+}
+
+#slider3:target ~ .image-container #img3,
+#slider3:target ~ .image-container .button {
+  width: 350px;
+  height: 350px;
+  background-color: transparent;
+  filter: saturate(100%);
+}
+
+#slider4:target ~ .image-container #img4,
+#slider4:target ~ .image-container .button {
+  width: 350px;
+  height: 350px;
+  background-color: transparent;
+  filter: saturate(100%);
+}
+
+#slider5:target ~ .image-container #img5,
+#slider5:target ~ .image-container .button {
+  width: 350px;
+  height: 350px;
+  background-color: transparent;
+  filter: saturate(100%);
+}
+
+#slider1:target ~ .image-container {
+  left: 40%;
+}
+
+#slider2:target ~ .image-container {
+  left: 20%;
+}
+
+#slider3:target ~ .image-container {
+  left: 0%;
+}
+
+#slider4:target ~ .image-container {
+  left: -20%;
+}
+
+#slider5:target ~ .image-container {
+  left: -40%;
+}
 
 /* ---------- Media queris for navbar ------- */
 
@@ -288,6 +419,31 @@ video {
 
   .icon-container {
     margin-top: 50px;
+  }
+
+  .video-description-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+  }
+  
+  .about-para-container {
+    margin: 0 0 0 2rem;
+    max-width: 600px;
+    
+  }
+  
+  .about-para {
+    font-size: 1.2rem;
   }
 }
 
