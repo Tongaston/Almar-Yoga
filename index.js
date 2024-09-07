@@ -1,16 +1,24 @@
-let navbar = document.querySelector('nav');
+import { audioVideo } from './audioVideo.js'
+
+// FUNCIONALIDADES NAVBAR
+
+let navbar = document.querySelector('nav')
 
 window.onscroll = function () {
   if (window.scrollY > 0) {
-    navbar.style.background = '#9cb8a2fe';
+    navbar.style.background = 'transparent'
   } else {
-    navbar.style.background = 'transparent';
+    navbar.style.background = '#9cb8a2fe'
   }
-};
+}
 
-let burguerIcon = document.querySelector('.burguer-icon');
-let navLinks = document.querySelector('.nav-list');
+let burguerIcon = document.querySelector('.menu-icon')
+let navLinks = document.querySelector('.nav-list')
 
 function toggleMenu() {
-  navLinks.classList.toggle('show-menu');
+  burguerIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('show-menu')
+  })
 }
+toggleMenu()
+audioVideo()
