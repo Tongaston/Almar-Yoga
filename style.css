@@ -40,11 +40,14 @@ nav {
   padding: 0 10px;
 }
 
-.nav-item {
+.nav-item a{
+  text-decoration: none;
+  color: rgba(14, 59, 68, 255);
   font-weight: 500;
   font-size: .8rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  
 
   &:hover {
     font-weight: 600;
@@ -117,8 +120,6 @@ h1 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* margin-left: 20px; */
-  /* margin-right: 2rem; */
 }
 
 .icon-svg {
@@ -174,7 +175,7 @@ h1 {
 
 /* ---------- Section About ------------- */
 
-.about-container {
+#about-container {
   height: calc(100vh - 80px);
   width: 80%;
   display: flex;
@@ -467,7 +468,7 @@ video {
     font-size: 1.5rem;
   }
 
-  .nav-item {
+  .nav-item a{
     font-size: 1.2rem;
   }
 
