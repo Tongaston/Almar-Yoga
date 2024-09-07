@@ -6,7 +6,7 @@
 }
 
 .logo {
-  width: 5rem;
+  width: 3.5rem;
 }
 
 body {
@@ -93,6 +93,15 @@ h1 {
   font-size: 13vw;
   line-height: 11vw;
   text-align: center;
+  color: transparent;
+  filter: drop-shadow(0 0 0.75rem #432013fe);
+
+  background-image: url(./assets/fondo\ letras.jpg);
+  background-size: cover;
+  background-position-y: center;
+  
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .icon-container {
@@ -144,7 +153,7 @@ h1 {
     max-height: 500px;
     display: block;
     margin: 1.5rem auto 0 auto;
-    border-radius: 15px;
+    border-radius: 8px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -166,39 +175,67 @@ h1 {
 /* ---------- Section About ------------- */
 
 .about-container {
-  height: calc(100dvh - 80px);
+  height: calc(100vh - 80px);
   width: 80%;
-  /* margin: 5rem auto 0 auto; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
+  align-items: center;
+  margin: 2rem auto 0 auto;
 }
 
 .video-description-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  /* margin-top: 2rem; */
+  align-items: center;
   width: 100%;
   height: 60%;
 }
 
 .video-container {
-  width: 100%;
-  height: 100%;
-  max-width: 300px;
-  max-height: 300px;
+  display: grid;
+  place-items: center;
+  width: 90%;
+  height: 90%;
+  min-height: 200px;
+  max-width: 400px;
+  max-height: 400px;
   margin: 0 auto;
+  position: relative;
+  object-fit: cover;
+  
 }
 
 video {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 15px; 
+  border-radius: 8px; 
+  position: absolute;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.audio-off {
+  z-index: 3;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  opacity: 0.7;
+}
+
+.audio-on {
+  z-index: 2;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  opacity: 0.7;
+  display: none;
 }
 
 .about-para-container {
@@ -211,132 +248,125 @@ video {
 }
 
 .about-para {
-  font-size: 1rem;
+  font-size: 0.5rem;
   margin-top: 1rem;
-  opacity: 0.7;
+  opacity: 0.6;
+  text-align: center;
+  text-wrap: balance;
 }
+
+.icon-contact-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon-contact-container  a img {
+  width: 32px;
+  height: 32px;
+}
+
 
 /* ---------- Carrousel de imagenes ------------- */
-.gallery-container {
-  width: 80%;
-  height: 25vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: hidden;
-}
-
-.image-container {
-  width: 80%;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-container {
+.sliderImage {
   width: 100%;
-  height: 400px;
-  position: absolute;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.slide-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 25px 0 25px;
+.mySlide {
+  display: none;
 }
 
-.img {
-  width: 200px;
-  height: 200px;
+.mySlide img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 80%;
   position: relative;
-  filter: saturate(10%);
-  border-radius: 10px;
-  transition: 0.7s;
+  margin: 2rem auto 0 auto;
 }
 
-.button {
+.prev, .next {
+  cursor: pointer;
   position: absolute;
-  width: 200px;
-  height: 200px;
-  transition: 0.7s;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-#slider1:target ~ .image-container #img1,
-#slider1:target ~ .image-container .button {
-  width: 350px;
-  height: 350px;
-  background-color: transparent;
-  filter: saturate(100%);
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-#slider2:target ~ .image-container #img2,
-#slider2:target ~ .image-container .button {
-  width: 350px;
-  height: 350px;
-  background-color: transparent;
-  filter: saturate(100%);
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-#slider3:target ~ .image-container #img3,
-#slider3:target ~ .image-container .button {
-  width: 350px;
-  height: 350px;
-  background-color: transparent;
-  filter: saturate(100%);
+.text {
+  color: #f2f2f2;
+  opacity: 0.8;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-#slider4:target ~ .image-container #img4,
-#slider4:target ~ .image-container .button {
-  width: 350px;
-  height: 350px;
-  background-color: transparent;
-  filter: saturate(100%);
+.numbertext {
+  color: #f2f2f2;
+  opacity: 0.8;
+  font-size: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-#slider5:target ~ .image-container #img5,
-#slider5:target ~ .image-container .button {
-  width: 350px;
-  height: 350px;
-  background-color: transparent;
-  filter: saturate(100%);
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-#slider1:target ~ .image-container {
-  left: 40%;
+.active, .dot:hover {
+  background-color: #717171;
 }
 
-#slider2:target ~ .image-container {
-  left: 20%;
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-#slider3:target ~ .image-container {
-  left: 0%;
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
-#slider4:target ~ .image-container {
-  left: -20%;
-}
-
-#slider5:target ~ .image-container {
-  left: -40%;
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 /* ---------- Media queris for navbar ------- */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (width <= 600px) {
   nav ul {
     position: absolute;
     width: 100%;
@@ -363,7 +393,7 @@ video {
 
 /* ------ Medias queries ---------*/
 
-@media screen and (min-width: 650px) {
+@media screen and (width >= 650px) {
  .user-img {
   width: 75%;
  }
@@ -388,9 +418,33 @@ video {
 .icon span {
   font-size: 1.2rem;
 }
+
+.about-para {
+  font-size: 0.8rem;
+
 }
 
-@media screen and (min-width: 960px) {
+.icon-contact-container {
+  gap: 2rem;
+}
+
+.icon-contact-container svg {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-contact-container  a img {
+  width: 40px;
+  height: 40px;
+}
+
+.slideshow-container {
+  max-width: 50%;
+  
+}
+}
+
+@media screen and (width >= 960px) {
   
   .container {
   flex-direction: row; 
@@ -439,54 +493,43 @@ video {
   .about-para-container {
     margin: 0 0 0 2rem;
     max-width: 600px;
-    
+    text-wrap: balance;
   }
   
   .about-para {
     font-size: 1.2rem;
+    text-align: left;
   }
-}
 
-/*------- Animation --------*/
-
-.header h1 span {
-  background: linear-gradient(#000, #000);
-  background-repeat: no-repeat;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-size: 0%;
-}
-
-.header h1 span:first-child {
-  animation: textcolor1 5s linear infinite alternate;
-}
-
-@keyframes textcolor1 {
-  0% {
-    background-size: 0%;
+  .video-description-container {
+    flex-direction: row;
   }
-  40% {
-    background-size: 100%;
+
+  video {
+    width: 100%;
+    height: 100%;
   }
-  100% {
-    background-size: 100%;
+
+  .slideshow-container {
+    max-width: 30%;
+    margin: 1rem auto 0 auto;
   }
+
+  .slideshow-container {
+    display: flex;
+    
+  }
+
+  .icon-contact-container svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-contact-container a img {
+    width: 50px;
+    height: 50px;
+  }
+
   
 }
 
-.header h1 span:last-child {
-  animation: textcolor2 5s linear infinite alternate;
-}
-
-@keyframes textcolor2 {
-  0% {
-    background-size: 0%;
-  }
-  40% {
-    background-size: 0%;
-  }
-  100% {
-    background-size: 100%;
-  }
-  
-}
