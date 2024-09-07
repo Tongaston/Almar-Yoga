@@ -1,4 +1,4 @@
-import { audioVideo } from './audioVideo.js'
+import { audioVideo } from './Functionalities/audioVideo.js'
 
 // FUNCIONALIDADES NAVBAR
 
