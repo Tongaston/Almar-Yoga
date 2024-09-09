@@ -1,4 +1,5 @@
 import { audioVideo } from './Functionalities/audioVideo.js'
+import { imageHover } from './Functionalities/imageHover.js'
 
 // FUNCIONALIDADES NAVBAR
 
@@ -20,5 +21,9 @@ function toggleMenu() {
     navLinks.classList.toggle('show-menu')
   })
 }
+
 toggleMenu()
+// FUNCIONALIDADES VIDEO MUTED
 audioVideo()
+// FUNCIONALIDADES SLIDER
+imageHover()
