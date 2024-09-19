@@ -7,8 +7,8 @@ const shortText = document.querySelector('.short-text')
 readMoreBtn.addEventListener('click', function () {
   // Si el texto adicional está oculto, lo mostramos
   if (moreText.style.display === 'none') {
-    moreText.style.display = 'inline'
-    shortText.style.display = 'none' // Opcional: Ocultamos el texto corto
+    moreText.style.display = 'block'
+    // shortText.style.display = 'none' // Opcional: Ocultamos el texto corto
     readMoreBtn.innerText = 'Leer menos' // Cambiamos el texto del botón
   } else {
     // Si el texto adicional está visible, lo ocultamos de nuevo
