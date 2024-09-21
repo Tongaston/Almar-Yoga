@@ -90,12 +90,13 @@ nav {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  margin-top: 2rem;
 }
 
 h1 {
   margin-bottom: 1rem;
-  font-size: 13vw;
-  line-height: 11vw;
+  font-size: 15vw;
+  line-height: 14vw;
   text-align: center;
   color: transparent;
   filter: drop-shadow(0 0 0.75rem #432013fe);
@@ -177,7 +178,7 @@ h1 {
 /* ---------- Section About ------------- */
 
 #about-container {
-  height: calc(100vh - 80px);
+  height: calc(120vh - 80px);
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -186,8 +187,12 @@ h1 {
 }
 
 .about-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  /* margin-bottom: 1rem; */
+  color: #27130bfe;
+}
+
+.about-title span {
   color: #8e4223fe;
 }
 
@@ -251,13 +256,13 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   max-width: 500px;
 }
 
 .about-para {
-  font-size: 0.5rem;
-  margin-top: 1rem;
+  font-size: .6rem;
+  margin-top: .4rem;
   opacity: 0.6;
   text-align: center;
   text-wrap: balance;
@@ -379,7 +384,7 @@ video {
 /* ----------- Section Practicas -------------- */
 
 #practicas {
-  height: calc(100vh - 80px);
+  height: calc(220vh - 80px);
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -389,10 +394,72 @@ video {
 
 .practicas-title {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #8e4223fe;
+  color:  #27130bfe;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.practicas-title span {
+  color: #8e4223fe;
+}
+
+.practicas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.practicas-card {
+  width: 80%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  background-color: #8e4223fe;
+  color: #f2f2f2;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.practica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.practica img {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.practica a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.paragraph-card {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: .5rem;
+  opacity: 0.8;
 }
 
 /* ---------- Media queris for navbar ------- */
