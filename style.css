@@ -55,7 +55,7 @@ nav {
   }
 }
 
-.nav-item-contacto a{
+.contacto a{
   display: none;
 }
 
@@ -400,7 +400,7 @@ video {
   font-size: 2rem;
   color:  #27130bfe;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .practicas-title span {
@@ -485,16 +485,33 @@ video {
   margin-top: 1rem;
 }
 
-.contact-info h3 {
+.contact-title span {
+  color: #8e4223fe;
+}
+
+.contacto-container h3 {
   font-size: 1.5rem;
   margin-top: 1rem;
   color: #27130bfe;
 }
 
-.contact-info p {
+.contacto-container p {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   opacity: 0.8;
+}
+
+.ayudarte {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 #contact-form {
@@ -540,6 +557,7 @@ video {
     width: 55%;
     padding: 15px;
     box-shadow: 10px 10px 20px rgba(246, 243, 243, 0.5);
+    font-size: 1rem;
   }
 }
 
@@ -787,6 +805,59 @@ video {
 
   .practicas-title {
     font-size: 3rem;
+  }
+
+  .contacto-container p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
+  
+  #contact-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .input-text {
+    width: 100%;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .input-text-area {
+    width: 100%;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  #contact-form button {
+    width: 50%;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(14, 59, 68, 255);
+    color: #f2f2f2;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      width: 55%;
+      padding: 15px;
+      box-shadow: 10px 10px 20px rgba(246, 243, 243, 0.5);
+      font-size: 1rem;
+    }
   }
   
 }
