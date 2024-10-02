@@ -55,6 +55,10 @@ nav {
   }
 }
 
+.nav-item-contacto a{
+  display: none;
+}
+
 .nav-btn {
   display: flex;
   align-items: center;
@@ -384,7 +388,7 @@ video {
 /* ----------- Section Practicas -------------- */
 
 #practicas {
-  height: calc(220vh - 80px);
+  height: calc(210vh - 80px);
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -462,6 +466,83 @@ video {
   opacity: 0.8;
 }
 
+
+/* ---------- Section Contact -------------- */
+
+#contact {
+  height: calc(100vh - 80px);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto 0 auto;
+}
+
+.contact-title {
+  font-size: 3rem;
+  color: #27130bfe;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #27130bfe;
+}
+
+.contact-info p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+#contact-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.input-text {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.input-text-area {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#contact-form button {
+  width: 50%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  background-color: rgba(14, 59, 68, 255);
+  color: #f2f2f2;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    width: 55%;
+    padding: 15px;
+    box-shadow: 10px 10px 20px rgba(246, 243, 243, 0.5);
+  }
+}
+
 /* ---------- Media queris for navbar ------- */
 
 @media only screen and (width <= 600px) {
@@ -480,6 +561,10 @@ video {
 
   .nav-btn {
     display: none;
+  }
+
+  .contacto a{
+    display: inline;
   }
 
   .menu-icon {
@@ -540,6 +625,14 @@ video {
   max-width: 50%;
   
 }
+
+}
+
+
+@media screen and (width >= 790px){
+  #practicas {
+    height: calc(140vh - 80px);
+  }
 }
 
 @media screen and (width >= 960px) {
@@ -580,6 +673,11 @@ video {
     margin-bottom: 0;
     text-align: right;
     margin-right: 300px;
+  }
+
+  #about-container {
+    height: calc(100vh - 80px);
+    
   }
   .video-description-container {
     display: flex;
@@ -681,9 +779,9 @@ video {
     filter: contrast(120%);
   }
 
-  #practicas{
-    height: calc(100vh - 80px);
-    max-width: 60%;
+  #practicas {
+    height: calc(140vh - 80px);
+    max-width: 80%;
     margin-top: 3rem;
   }
 
@@ -691,4 +789,10 @@ video {
     font-size: 3rem;
   }
   
+}
+
+@media screen and (width >= 1205px) {
+  #practicas {
+    height: calc(100vh - 80px);
+  }
 }
