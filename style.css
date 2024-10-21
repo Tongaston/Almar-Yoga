@@ -695,8 +695,12 @@ video {
 
   #about-container {
     height: calc(100vh - 80px);
-    
   }
+
+  .about-title {
+    margin-top: 3rem;
+  }
+
   .video-description-container {
     display: flex;
     flex-direction: row;
@@ -799,7 +803,7 @@ video {
 
   #practicas {
     height: calc(140vh - 80px);
-    max-width: 80%;
+    max-width: 60%;
     margin-top: 3rem;
   }
 
