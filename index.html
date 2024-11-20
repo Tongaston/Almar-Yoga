@@ -145,18 +145,18 @@
       <h2 class="about-title">Sobre <span>Mí</span></h2>
       <main class="video-description-container">
         <div class="video-container">
-           <video width="320" height="540" autoplay loop muted>
+           <video id="video" width="320" height="540" autoplay loop muted>
              <source src="./assets/images/video.mp4" type="video/mp4">
              <p>Error al cargar el video, reinicia tu navegador.</p>
             </video>
 
-            <i class="audio-on"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><g fill="white">
+            <i class="audio-on" id="audio"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"><g fill="white">
               <path d="M10 16v-5.401A2.999 2.999 0 0 0 10 5.4V0L4.667 4H0v8h4.667z"/>
               <path d="m13.6 3.2l-.799-.6L11.6 4.199l.8.6a4 4 0 0 1 .8.802c.503.668.8 1.497.8 2.399s-.297 1.73-.8 2.4a4 4 0 0 1-.8.8l-.8.601l1.201 1.6l.8-.601a6 6 0 0 0 1.198-1.2A5.98 5.98 0 0 0 16 8c0-1.35-.447-2.598-1.2-3.6a6 6 0 0 0-1.2-1.2"/>
             </g></svg>
           </i>
  
-          <i>
+          <i id="audio">
             <svg class="audio-off" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
               <path fill="white" d="M9 0v16l-5.333-4H0V4h3.667zm2.586 8l-1.5 1.5l1.414 1.414l1.5-1.5l1.5 1.5L15.914 9.5l-1.5-1.5l1.5-1.5L14.5 5.086l-1.5 1.5l-1.5-1.5L10.086 6.5z"/>
             </svg>
@@ -358,14 +358,28 @@
           <p class="ayudarte">¡Estaré encantada de ayudarte!</p>
           <div class="contact-info">
             <form id="contact-form">
-              <input class="input-text" type="text" placeholder="Nombre" required>
-              <input class="input-text" type="email" placeholder="Correo Electrónico" required>
-              <textarea class="input-text-area" rows="5" cols="50" placeholder="Mensaje" required></textarea>
-              <button type="submit">Enviar</button>
+              <input id="from_name" class="input-text" type="text" placeholder="Nombre" required>
+              <input id="from_email" class="input-text" type="email" placeholder="Correo Electrónico" required>
+              <textarea id="message" class="input-text-area" rows="5" cols="50" placeholder="Mensaje" required></textarea>
+              <button type="submit" onclick="sendMail()">Enviar</button>
             </form>
               
             
     <script type="module" src="index.js"></script>
     <script src="./Functionalities/autoSlider.js"></script>
+    <script src="./Functionalities/contactForm.js"></script>
+
+    <!-- Script emailJS -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+          publicKey: "IqQfS1kYT8-YC503w",
+          });
+        })();
+    </script>
+
   </body>
 </html>
