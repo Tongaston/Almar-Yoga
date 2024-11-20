@@ -5,6 +5,9 @@ import { imageHover } from './Functionalities/imageHover.js'
 
 let navbar = document.querySelector('nav')
 
+let element = document.body
+element.scrollIntoView({ behavior: 'smooth' })
+
 window.onscroll = function () {
   if (window.scrollY > 0) {
     navbar.style.background = 'transparent'
@@ -23,6 +26,7 @@ function toggleMenu() {
 }
 
 toggleMenu()
+
 // FUNCIONALIDADES VIDEO MUTED
 audioVideo()
 // FUNCIONALIDADES SLIDER
