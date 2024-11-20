@@ -1,21 +1,21 @@
 // AUDIO VIDEO
-let audioOn = document.querySelector('.audio-on')
-let audioOff = document.querySelector('.audio-off')
 
 export function audioVideo() {
-  let video = document.querySelector('video')
+  const video = document.getElementById('video')
+  const audioOn = document.querySelector('.audio-on')
+  const audioOff = document.querySelector('.audio-off')
 
   video.muted = true
 
-  video.addEventListener('click', () => {
+  audioOff.addEventListener('click', () => {
     video.muted = !video.muted
+    audioOn.style.display = 'block'
+    audioOff.style.display = 'none'
+  })
 
-    if (!video.muted) {
-      audioOn.style.display = 'block'
-      audioOff.style.display = 'none'
-    } else {
-      audioOn.style.display = 'none'
-      audioOff.style.display = 'block'
-    }
+  audioOn.addEventListener('click', () => {
+    video.muted = !video.muted
+    audioOn.style.display = 'none'
+    audioOff.style.display = 'block'
   })
 }
