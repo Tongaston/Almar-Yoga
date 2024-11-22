@@ -802,7 +802,7 @@ video {
   }
 
   #practicas {
-    height: calc(140vh - 80px);
+    height: calc(220vh - 80px);
     max-width: 60%;
     margin-top: 3rem;
   }
@@ -866,8 +866,14 @@ video {
   
 }
 
-@media screen and (width >= 1205px) {
+@media screen and (width >= 1054px) {
+  #practicas {
+    height: calc(140vh - 80px);
+  }
+
+@media screen and (width >= 1505px) {
   #practicas {
     height: calc(100vh - 80px);
   }
+}
 }
