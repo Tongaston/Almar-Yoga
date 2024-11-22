@@ -182,7 +182,7 @@ h1 {
 /* ---------- Section About ------------- */
 
 #about-container {
-  height: calc(120vh - 80px);
+  height: calc(120vh - 90px);
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -232,10 +232,6 @@ video {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   border-radius: 8px; 
   position: absolute;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .audio-off {
@@ -244,6 +240,10 @@ video {
   top: 5%;
   left: 5%;
   opacity: 0.7;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .audio-on {
@@ -253,6 +253,10 @@ video {
   left: 5%;
   opacity: 0.7;
   display: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .about-para-container {
@@ -515,6 +519,7 @@ video {
 }
 
 #contact-form {
+  height: calc(100vh - 80px);
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -560,6 +565,34 @@ video {
     font-size: 1rem;
   }
 }
+
+  /* -------- footer ---------- */
+  footer {
+    width: 130%;
+    height: 80px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(14, 59, 68, 255);
+    color: #f2f2f2;
+    font-size: 0.8rem;
+  }
+
+  .footer-container {
+    margin: 10px;
+  }
+
+  footer a {
+    color: #5a9f77;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+
 
 /* ---------- Media queris for navbar ------- */
 
@@ -863,12 +896,20 @@ video {
       font-size: 1rem;
     }
   }
+
+  footer {
+    font-size: 1rem;
+  }
   
 }
 
 @media screen and (width >= 1054px) {
   #practicas {
     height: calc(140vh - 80px);
+  }
+
+  #contact-form {
+    width: 60%;
   }
 
 @media screen and (width >= 1505px) {
