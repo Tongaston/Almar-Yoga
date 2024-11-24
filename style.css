@@ -536,13 +536,14 @@ video {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.input-text-area {
+.message {
   width: 100%;
   padding: 10px;
   margin: 0.5rem 0;
   border: none;
   border-radius: 8px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  field-sizing: content;
 }
 
 #contact-form button {
