@@ -16,6 +16,7 @@ header {
   background-image: url(./fondo-header-blog.jpg);
   background-size: cover;
   overflow: hidden;
+  mask-image: linear-gradient(black 90%, transparent);
 
 }
 header img {
@@ -57,7 +58,7 @@ main {
 
 .post h2 {
   font-size: 1.8rem;
-  color: rgba(2, 175, 205, 255);
+  color: rgba(1, 131, 154, 0.9);
   margin-bottom: 10px;
 }
 
@@ -69,18 +70,18 @@ main {
 
 .post img {
   width: 100%;
-  height: auto;
+  height: 80%;
   border-radius: 10px;
   margin: 10px auto;
 }
 
-.more-text {
+/* .more-text {
   display: none;
-}
+} */
 
 .read-more-btn {
-  display: inline-block;
-  background-color: #5a9f77;
+  display: inline;
+  background-color: rgba(1, 131, 154, 0.9);
   color: white;
   padding: 10px 15px;
   text-decoration: none;
@@ -89,11 +90,14 @@ main {
   cursor: pointer;
   border: none;
 
-  
+  &:hover {
+    background-color: rgba(1, 112, 132);
+  }
 }
 
-.read-more:hover {
-  background-color: #4e8769;
+#article-btn {
+  display: none;
+  margin: 5px;
 }
 
 /* Pie de página */
