@@ -92,6 +92,10 @@ header h1 {
   margin: 0;
 }
 
+.benefit li strong {
+  color: #4a90e2;
+}
+
 .conclusion {
   margin-top: 30px;
 }
@@ -120,4 +124,24 @@ header h1 {
   &:hover {
     background-color: rgba(1, 112, 132);
   }
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: rgba(1, 131, 154, 0.9);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
