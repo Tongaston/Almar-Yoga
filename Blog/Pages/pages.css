@@ -8,7 +8,39 @@ body {
   background-color: #d6f8f6fe;
 }
 
-.header {
+header {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  background-image: url(../fondo-header-blog.jpg);
+  background-size: cover;
+  overflow: hidden;
+  mask-image: linear-gradient(black 90%, transparent);
+
+}
+header img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+header h1 {
+  font-size: 3vw;
+  line-height: 4vw;
+  text-align: center;
+  color: transparent;
+  filter: drop-shadow(0 0 0.75rem #432013fe);
+
+  background-image: url(../../assets/fondo\ letras.jpg);
+  background-size: cover;
+  background-position-y: center;
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* .header {
   background-color: rgba(1, 131, 154, 0.9);
   color: whitesmoke;
   text-align: center;
@@ -18,7 +50,7 @@ body {
 .header h1 {
   margin: 0;
   font-size: 2rem;
-}
+} */
 
 .pages-img {
   width: 80%;
@@ -26,6 +58,7 @@ body {
   border-radius: 8px;
   margin: 0 auto;
   display: block;
+  aspect-ratio: 16/9;
 }
 
 .content {
