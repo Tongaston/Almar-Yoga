@@ -17,7 +17,6 @@ Bienvenido al repositorio del sitio web de Almar Yoga. Este proyecto tiene como 
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-- **Bootstrap**
 
 ## Contacto
 
