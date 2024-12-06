@@ -5,7 +5,7 @@ function sendMail() {
     message: document.getElementById('message').value,
   }
 
-  emailjs.send('service_t6oxaez', 'template_sgins5e', params).then(
+  emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, params).then(
     function () {
       alert('Consulta enviada correctamente')
     },
