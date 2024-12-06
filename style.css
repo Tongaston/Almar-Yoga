@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .logo {
@@ -90,7 +91,9 @@ nav {
 
 .header {
   width: 80%;
-  height: calc(100dvh - 80px);
+  /* height: calc(100dvh - 80px); */
+  height: 100dvh;
+  scroll-margin-top: 80px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -182,7 +185,9 @@ h1 {
 /* ---------- Section About ------------- */
 
 #about-container {
-  height: calc(120vh - 90px);
+  /* height: calc(120vh - 90px); */
+  height: 100dvh;
+  scroll-margin-top: 80px;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -392,15 +397,17 @@ video {
 /* ----------- Section Practicas -------------- */
 
 #practicas {
-  height: calc(210vh - 80px);
+  /* height: calc(210vh - 80px); */
+  height: 170dvh;
+  scroll-margin-top: 80px;
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem auto 0 auto;
   flex: 1; 
-    min-height: 200px; 
-    padding: 20px;
+  min-height: 200px; 
+  padding: 20px;
 }
 
 .practicas-title {
@@ -479,6 +486,8 @@ video {
 
 #contact {
   height: calc(100vh - 80px);
+  /* height: 100vh; */
+  scroll-margin-top: 80px;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -523,12 +532,14 @@ video {
 }
 
 #contact-form {
-  height: calc(100vh - 80px);
+  height: calc(100dvh - 160px);
+  /* height: 100dvh; */
+  /* scroll-margin-top: 80px; */
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 1rem; 
 }
 
 .input-text {
