@@ -22,6 +22,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+
   </head>
   <body>
     <nav>
@@ -360,10 +364,10 @@
         </div>
           
             <form id="contact-form">
-              <input id="from_name" class="input-text" type="text" placeholder="Nombre" required>
-              <input id="from_email" class="input-text" type="email" placeholder="Correo Electrónico" required>
+              <input id="form_name" class="input-text" type="text" placeholder="Nombre" required>
+              <input id="form_email" class="input-text" type="email" placeholder="Correo Electrónico" required>
               <textarea id="message" class="input-text-area" rows="5" cols="50" placeholder="Mensaje" required></textarea>
-              <button type="submit" onclick="sendMail()">Enviar</button>
+              <button type="submit">Enviar</button>
             </form>
 
 
@@ -380,24 +384,9 @@
             </footer>
       </section>
 
-          
-          
-            
+                
     <script type="module" src="index.js"></script>
     <script src="./Functionalities/autoSlider.js"></script>
-    <script src="./Functionalities/contactForm.js"></script>
-
-    <!-- Script emailJS -->
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init({
-          publicKey: process.env.PUBLIC_KEY,
-          });
-        })();
-    </script>
-
+    <script type="module" src="./Functionalities/contactForm.js" defer></script>
   </body>
 </html>
