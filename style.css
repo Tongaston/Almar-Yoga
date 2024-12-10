@@ -290,13 +290,29 @@ video {
 .icon-contact-container  a img {
   width: 32px;
   height: 32px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
+.icon-contact-container svg {
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+
+/* ---------- Carrousel de imagenes ------------- */
 .imagesSliderContainer {
   display: none;
 }
 
-/* ---------- Carrousel de imagenes ------------- */
 .sliderImage {
   width: 100%;
   border-radius: 8px;
