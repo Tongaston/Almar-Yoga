@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form')
 
   // Obtener la configuración de EmailJS desde el backend
-  fetch('http://localhost:3000/emailjs-config')
+  fetch('https://almar-yoga.vercel.app/api/emailjs-config')
     .then((response) => response.json())
     .then((config) => {
       // Inicializar EmailJS con el userId
